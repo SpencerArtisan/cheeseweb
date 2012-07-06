@@ -115,6 +115,7 @@ module Isolate
     # The Gem::Specification for this entry or nil if it isn't resolveable.
 
     def specification
+      puts "Find '" + name + " with requirement '" + requirement.to_s + "'"
       Gem::Specification.find_by_name(name, requirement)
     rescue Gem::LoadError
       nil
